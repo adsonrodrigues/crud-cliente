@@ -5,17 +5,33 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: adsonrodrigues/crud-cliente
+    image: adsonrodrigues/crud
     volumes:
       - .:/usr/local/app
     ports:
       - 8000:8000
+    depends_on:
+      - postgres
     stdin_open: true
     tty: true
     networks:
-      - crud-api-network
+      - crud-network
+
+  postgres:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root1234
+      - POSTGRES_DB=crud
+    networks:
+      - crud-network
+
+volumes:
+  postgres_data:
 
 networks:
-  crud-api-network:
-    name: crud-api-network
+  crud-network:
+    name: crud-network
     driver: bridge

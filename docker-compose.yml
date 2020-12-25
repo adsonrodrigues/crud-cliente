@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  service:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: adsonrodrigues/crud-cliente
+    volumes:
+      - .:/usr/local/app
+    ports:
+      - 8000:8000
+    stdin_open: true
+    tty: true
+    networks:
+      - crud-api-network
+
+networks:
+  crud-api-network:
+    name: crud-api-network
+    driver: bridge

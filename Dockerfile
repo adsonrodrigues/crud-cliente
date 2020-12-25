@@ -11,7 +11,7 @@ RUN apt upgrade -y
 RUN apt-get update --fix-missing
 
 ## postgres dev symbols
-RUN apt-get install -y \yy
+RUN apt-get install -y \
     libpq-dev libffi-dev libssl-dev
 
 RUN apt-get install -y \

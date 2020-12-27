@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'users',
+    'clientes',
 ]
 
 MIDDLEWARE = [
@@ -77,10 +77,10 @@ TEMPLATES = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-    ),
+    ]
 }
 
 WSGI_APPLICATION = 'crud_cliente.wsgi.application'
@@ -131,5 +131,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = '/api/cliente'

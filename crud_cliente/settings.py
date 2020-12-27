@@ -26,7 +26,7 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = env.str("SECRET_KEY", default="z6mew@b6g^)kx@z9565v88y^0p!4#cqlaemye++*1+bfk)=(v@")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=True)
@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'crud_cliente.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db_url()
+    'default': env.db_url(default=f'sqlite:////{BASE_DIR}/crud.db')
 }
 
 

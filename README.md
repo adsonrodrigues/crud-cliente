@@ -76,6 +76,7 @@ _Caso não seja criado o .env do projeto o projeto irá rodar numa aplicação c
 ___
 ```sh
 $ docker-compose up -d
+$ docker-compose exec service python3 manage.py runserver 0.0.0.0:8000
 ```
 
 ## API

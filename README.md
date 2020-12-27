@@ -11,6 +11,7 @@ ___
   * [Pré-requisitos](#pre-requisitos)
   * [Instalação](#instalacao)
   * [Rode o Projeto](#rode-o-projeto)
+* [API](#api)
 * [Contribuição](#contribuicao)
 * [Licença](#licenca)
 * [Contato](#contato)
@@ -76,6 +77,37 @@ ___
 ```sh
 $ docker-compose up -d
 ```
+
+## API
+___
+Está API contém seguintes endpoints:
+
+#### Login
+```
+POST /auth/login/
+```
+
+#### Logout
+```
+POST /auth/logout/
+```
+#### Listar Clientes
+```
+GET /api/cliente/
+```
+#### Detalhe do Cliente
+```
+GET /api/cliente/<id>
+```
+#### Atualizar Cliente
+```
+PUT /api/cliente/<id>
+```
+#### Cadastrar novo Cliente
+```
+POST /api/cliente/
+```
+
 
 ## Licença
 ___

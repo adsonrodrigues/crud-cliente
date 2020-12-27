@@ -52,6 +52,25 @@ $ docker-compose exec service python3 manage.py migrate # (only first)
 $ docker-compose exec service python3 manage.py createsuperuser # (only first)
 ```
 
+### Crie o .env do projeto
+___
+```sh
+$ cd crud_cliente
+$ touch .env
+```
+
+### Adicione as informações .env
+___
+```.env
+SECRET_KEY='z6mew@b6g^)kx@z9565v88y^0p!4#cqlaemye++*1+bfk)=(v@'
+DATABASE_URL='postgres://postgres:root1234@postgres:5432/crud'
+DEBUG=True
+```
+
+
+_Caso não seja criado o .env do projeto o projeto irá rodar numa aplicação com variáveis default e com o banco SQlite._
+
+
 ### Rode o projeto
 ___
 ```sh

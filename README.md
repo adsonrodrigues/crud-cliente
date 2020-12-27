@@ -4,16 +4,16 @@ ___
 
 ## Tabela de Conteúdo
 ___
-* [Table of Contents](#table-of-contents)
-* [About the Project](#about-the-project)
-  * [Done With](#done-with)
-* [Starting](#starting)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-  * [Run Project](#run-project)
-* [Contribution](#contribution)
-* [License](#license)
-* [Contact](#contact)
+* [Tabela de Conteudo](#tabela-de-conteudo)
+* [Sobre o Projeto](#sobre-o-projeto)
+  * [Feito Com](#feito-com)
+* [Começando](#comecando)
+  * [Pré-requisitos](#pre-requisitos)
+  * [Instalação](#instalacao)
+  * [Rode o Projeto](#rode-o-projeto)
+* [Contribuição](#contribuicao)
+* [Licença](#licenca)
+* [Contato](#contato)
 
 ## Sobre o Projeto
 ___
